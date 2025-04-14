@@ -12,7 +12,7 @@ export default function Cart() {
 			<HeroBanner title='Cart' href='/cart' />
 			<CartSection />
 			<InfoRow />
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	)
 }
