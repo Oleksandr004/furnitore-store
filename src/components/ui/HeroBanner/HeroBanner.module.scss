@@ -1,0 +1,44 @@
+.background {
+	background-image: url(/images/shop-page/background.png);
+	background-position: center;
+	background-size: 100%;
+	@media (max-width: 1450px) {
+		background-size: auto;
+	}
+}
+.container {
+	padding-top: 61px;
+	padding-bottom: 97px;
+}
+.logo {
+	margin: 0 auto;
+	width: clamp(60px, 5.347vw, 77px);
+}
+.title {
+	position: relative;
+	bottom: 17px;
+	font-family: Poppins;
+	font-size: clamp(36px, 3.333vw, 48px);
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	margin-bottom: 2px;
+}
+.links_row {
+	gap: 6px;
+	justify-content: center;
+	position: relative;
+	bottom: 17px;
+}
+.home_link {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.shop_link {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}

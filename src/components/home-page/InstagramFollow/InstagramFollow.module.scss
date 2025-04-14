@@ -1,0 +1,40 @@
+.inst_follow {
+	background: url('/images/main-page/follow-bg.png');
+}
+
+.title {
+	color: rgb(0, 0, 0);
+	font-family: Poppins;
+	font-size: 60px;
+	font-size: clamp(40px, 7vw, 60px);
+	font-weight: 700;
+	line-height: 1.5;
+}
+.subtitle {
+	color: rgb(0, 0, 0);
+	font-family: Poppins;
+	font-size: clamp(16px, 2vw, 20px);
+	font-weight: 400;
+	line-height: 1.5;
+}
+.follow_btn {
+	display: block;
+	width: 255px;
+	width: 200px;
+	width: clamp(180px, 17.708vw, 255px);
+	max-width: 255px;
+	height: 64px;
+	margin: 0 auto;
+	margin-top: 18px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+	background: rgb(250, 244, 244);
+	a {
+		color: rgb(0, 0, 0);
+		font-family: Poppins;
+		font-size: 20px;
+		font-size: clamp(16px, 2.3vw, 20px);
+		font-weight: 400;
+		line-height: 1.5;
+	}
+}

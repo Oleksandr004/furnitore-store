@@ -1,0 +1,143 @@
+.container {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding: clamp(30px, 7.717vw, 98px) 15px 0;
+}
+.location {
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	min-width: 285px;
+}
+.links {
+	margin-left: 136px;
+	margin-right: 172px;
+}
+.help {
+	margin-right: 175px;
+}
+.links_title,
+.help_title,
+.newsletter_title {
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.help_list,
+.links_list {
+	margin-top: 15px;
+	margin-top: clamp(20px, 5vw, 55px);
+	gap: clamp(20px, 3.465vw, 44px);
+}
+.links_list li a {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.help_list li a {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.line {
+	width: 100%;
+	border: 1px solid rgb(217, 217, 217);
+	margin-top: 48px;
+	margin-bottom: 35px;
+}
+.rights {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: clamp(15px, 3vw, 38px);
+}
+.newsletter_title {
+	margin-bottom: clamp(5px, 2.1vw, 53px);
+}
+.newsletter_input {
+	height: 21px;
+	width: 200px;
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	border-bottom: 1px solid black;
+}
+.newsletter_input:focus {
+	outline: none;
+}
+.newsletter_btn {
+	height: 21px;
+	width: 75px;
+	border-bottom: 1px solid black;
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+@media (max-width: 1600px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+@media (max-width: 1200px) {
+	.links,
+	.help {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	.newsletter {
+		margin-top: 30px;
+	}
+}
+@media (max-width: 920px) {
+	.row {
+		flex-direction: column;
+	}
+	.container {
+		max-width: 315px;
+	}
+	.location {
+		margin: 0;
+	}
+	.links {
+		margin-top: 25px;
+	}
+	.links_title,
+	.help_title {
+		color: black;
+	}
+	.links_list {
+		margin: 0;
+	}
+	.links_list li,
+	.help_list {
+		color: rgb(159, 159, 159);
+	}
+	.line {
+		display: none;
+	}
+	.newsletter {
+		margin-bottom: 20px;
+	}
+	.rights {
+		display: none;
+	}
+	.help {
+		margin-top: 15px;
+	}
+	.help_title {
+		margin-bottom: 0;
+	}
+	.links_title {
+		margin-bottom: 15px;
+	}
+}

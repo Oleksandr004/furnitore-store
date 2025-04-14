@@ -1,0 +1,10 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+@media (max-width: 1040px) {
+	.container {
+		justify-content: center;
+	}
+}

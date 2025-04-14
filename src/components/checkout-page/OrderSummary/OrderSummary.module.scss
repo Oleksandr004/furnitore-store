@@ -1,0 +1,119 @@
+.container {
+	max-width: 533px;
+}
+
+.column_title {
+	font-family: Poppins;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 36px;
+	margin-bottom: 14px;
+}
+.product_name {
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-bottom: 7px;
+}
+.product_price {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	margin-bottom: 7px;
+}
+.total_price {
+	color: rgb(184, 142, 47);
+	font-family: Poppins;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 36px;
+	letter-spacing: 0%;
+	text-align: left;
+}
+.total_title {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-top: 20px;
+}
+.line {
+	width: 100%;
+	border: 1px solid rgb(217, 217, 217);
+	margin-top: 33.5px;
+	margin-bottom: 22.5px;
+}
+.payment_info {
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: justify;
+	margin-top: 11px;
+	margin-bottom: 25px;
+}
+.privacy_policy {
+	color: rgb(0, 0, 0);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: justify;
+	margin-top: 22px;
+	a {
+		font-weight: 600;
+	}
+}
+.payment_option {
+	display: block;
+	color: rgb(159, 159, 159);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+.payment_option input[type='radio']:checked + span {
+	color: rgb(0, 0, 0);
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+}
+.payment_option input[type='radio'] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+	border: 2px solid rgb(159, 159, 159);
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	background-color: white;
+}
+
+.payment_option input[type='radio']:checked {
+	background-color: black;
+	border: none;
+}
+
+.place_order_btn {
+	font-family: Poppins;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 30px;
+	text-align: center;
+	width: 318px;
+	height: 64px;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 15px;
+	display: block;
+	margin: 39px auto 0;
+}

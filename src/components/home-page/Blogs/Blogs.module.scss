@@ -1,0 +1,72 @@
+.title {
+	font-size: clamp(28px, 2.903vw, 36px);
+	font-weight: 500;
+	line-height: 1.5;
+}
+.subtitle {
+	color: rgb(159, 159, 159);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: clamp(20px, 5.161vw, 64px);
+}
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+.name {
+	font-family: Poppins;
+	font-size: 20px;
+	font-size: clamp(16px, 1.613vw, 20px);
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	margin-top: 10px;
+}
+.read_more {
+	font-family: Poppins;
+	font-size: clamp(18px, 1.935vw, 24px);
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	display: block;
+}
+.line {
+	width: clamp(85px, 9.274vw, 115px);
+	border: clamp(1px, 0.161vw, 2px) solid black;
+	margin: clamp(0px, 0.8vw, 10px) auto 18px;
+}
+
+.date_row {
+	max-width: 234px;
+	margin: 0 auto;
+}
+.date {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+.time {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+.all_post_link {
+	font-family: Poppins;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.5;
+	display: block;
+	max-width: 126px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.post_link_line {
+	width: 115px;
+	height: 0;
+	border: 2px solid black;
+	margin: 0 auto;
+}
