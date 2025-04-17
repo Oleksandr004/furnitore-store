@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 import style from './HeroBanner.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const poppins = Poppins({
 	weight: ['400', '500', '600', '700'],
@@ -10,6 +11,7 @@ const poppins = Poppins({
 })
 
 const MotionImg = motion(Image)
+const MotionLink = motion(Link)
 
 const HeroBanner = () => {
 	return (
@@ -30,7 +32,7 @@ const HeroBanner = () => {
 					>
 						Rocket single <br /> seater
 					</motion.h1>
-					<motion.a
+					<MotionLink
 						style={{ display: 'block' }}
 						initial={{
 							opacity: 0,
@@ -42,10 +44,10 @@ const HeroBanner = () => {
 						}}
 						transition={{ duration: 0.3 }}
 						className={style.subtitle}
-						href='#!'
+						href='/shop'
 					>
 						Shop Now
-					</motion.a>
+					</MotionLink>
 					<motion.div
 						initial={{
 							opacity: 0,
