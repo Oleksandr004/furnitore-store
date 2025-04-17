@@ -15,7 +15,8 @@ const ProductPage = () => {
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				const response = await fetch(`http://localhost:3000/api/products/${id}`)
+				const baseUrl = window.location.origin
+				const response = await fetch(`${baseUrl}/api/products/${id}`)
 				if (!response.ok) {
 					throw new Error('Failed to fetch')
 				}

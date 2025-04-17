@@ -35,7 +35,7 @@ const Catalog = ({ products = [], totalPages, filters, setFilters }) => {
 									className={styles.product_img}
 									height={287}
 									width={287}
-									src={`${product.imageUrl}`} //ahahhahahahahhahahahah
+									src={product.imageUrl}
 									alt={product.name}
 								/>
 								<h3 className={`${styles.name} mt-4 mb-3`}>
