@@ -15,27 +15,29 @@ const ProductPage = () => {
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				const baseUrl = window.location.origin
+				const baseUrl = window.location.origin // автоматически берёт текущий домен
 				const response = await fetch(`${baseUrl}/api/products/${id}`)
+
 				if (!response.ok) {
 					throw new Error('Failed to fetch')
 				}
-				const data = await response.json()
 
+				const data = await response.json()
 				setProduct(data)
 			} catch (error) {
-				setError(error.massage)
+				setError(error.message)
 			}
 		}
-		fetchProduct()
+		if (id) fetchProduct()
 	}, [id])
 
 	if (error) {
-		return <p>Error : {error}</p>
+		return <p>Error: {error}</p>
 	}
 	if (!product) {
 		return <p>Loading...</p>
 	}
+
 	return (
 		<>
 			<Header />
