@@ -46,6 +46,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 	}
 
 	const MotionLink = motion(Link)
+	const baseUrl = window.location.origin
 
 	return (
 		<div className={`${styles.product}`}>
@@ -63,7 +64,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					</MotionLink>
 					<img
 						className='ml-5 mr-7'
-						src='http://localhost:3000/images/icons/arrow.png'
+						src={`${baseUrl}/images/icons/arrow.png`}
 						alt='arrow img'
 					/>
 					<MotionLink
@@ -78,7 +79,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					</MotionLink>
 					<img
 						className='ml-7 mr-8'
-						src='http://localhost:3000/images/icons/arrow.png'
+						src={`${baseUrl}/images/icons/arrow.png`}
 						alt='arrow img'
 					/>
 					<div className={`${styles.line}`} />
@@ -89,7 +90,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 						<Image
 							height={500}
 							width={423}
-							src={`http://localhost:3000/${image}`}
+							src={`${baseUrl}/${image}`}
 							alt='not defined'
 						/>
 					</div>
