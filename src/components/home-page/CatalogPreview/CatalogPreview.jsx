@@ -21,13 +21,13 @@ const CatalogPreview = () => {
 		<section className='bg-[#FAF4F4]'>
 			<div className={`${styles.container} flex `}>
 				<motion.div
-					initial={isMobile ? {} : { x: -100 }}
-					whileInView={isMobile ? {} : { x: 0 }}
+					initial={isMobile ? { x: 0 } : { x: -100 }}
+					whileInView={isMobile ? { x: 0 } : { x: 0 }}
 					transition={{ duration: isMobile ? 0 : 0.5 }}
-					className={styles.right_side}
+					className={styles.left_side}
 				>
 					<Image
-						className={styles.right_img}
+						className={styles.left_img}
 						src='/images/main-page/left-table.png'
 						height={289}
 						width={435}
@@ -38,9 +38,9 @@ const CatalogPreview = () => {
 					<div className={`${styles.line}`} />
 				</motion.div>
 				<motion.div
-					initial={isMobile ? {} : { x: 100 }}
-					whileInView={isMobile ? {} : { x: 0 }}
-					transition={isMobile ? {} : { duration: 0.5 }}
+					initial={isMobile ? { x: 0 } : { x: 100 }}
+					whileInView={isMobile ? { x: 0 } : { x: 0 }}
+					transition={isMobile ? { x: 0 } : { duration: 0.5 }}
 					className={styles.right_side}
 				>
 					<Image

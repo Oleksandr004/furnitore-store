@@ -25,7 +25,6 @@
 .subtitle {
 	color: rgb(0, 0, 0);
 	font-family: Poppins;
-	// font-size: 24px;
 	font-size: clamp(18px, 1.935vw, 24px);
 	font-weight: 500;
 	line-height: clamp(24px, 2.903vw, 36px);
@@ -49,5 +48,26 @@
 	.title_left,
 	.title_right {
 		margin-bottom: 12px;
+	}
+}
+// .left_side {
+// 	max-width: 435px;
+// 	display: block;
+// 	margin: 0 auto;
+// }
+// .right_side {
+// 	max-width: 435px;
+// 	display: block;
+// 	margin: 0 auto;
+// }
+@media (max-width: 768px) {
+	.right_side {
+		// margin: 0 auto;
+	}
+	.left_side {
+		// margin: 0 auto;
+	}
+	.container {
+		// justify-content: center;
 	}
 }
