@@ -22,3 +22,6 @@ body {
 .unscroll {
 	overflow: hidden;
 }
+:root {
+	color-scheme: light;
+}
