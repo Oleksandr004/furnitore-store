@@ -40,7 +40,7 @@ const CatalogPreview = () => {
 				<motion.div
 					initial={isMobile ? { x: 0 } : { x: 100 }}
 					whileInView={isMobile ? { x: 0 } : { x: 0 }}
-					transition={isMobile ? { x: 0 } : { duration: 0.5 }}
+					transition={{ duration: isMobile ? 0 : 0.5 }}
 					className={styles.right_side}
 				>
 					<Image
