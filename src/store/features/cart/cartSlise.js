@@ -33,7 +33,6 @@ const cartSlice = createSlice({
 			}
 
 			state.totalPrice += cleanedPrice * quantity
-			alert(JSON.stringify(state))
 		},
 		removeItem: (state, action) => {
 			const id = action.payload
