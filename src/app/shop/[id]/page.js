@@ -17,7 +17,6 @@ const ProductPage = () => {
 			try {
 				const baseUrl = window.location.origin // автоматически берёт текущий домен
 				const response = await fetch(`${baseUrl}/api/products/${id}`)
-
 				if (!response.ok) {
 					throw new Error('Failed to fetch')
 				}

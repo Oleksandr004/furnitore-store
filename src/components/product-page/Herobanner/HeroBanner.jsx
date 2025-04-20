@@ -91,7 +91,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 							height={500}
 							width={423}
 							src={`${baseUrl}${imageUrl}`}
-							alt={`${baseUrl}${imageUrl}`}
+							alt='Image not found'
 						/>
 					</div>
 					<div className={`${styles.text} `}>
