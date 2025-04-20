@@ -5,7 +5,7 @@ const Forms = () => {
 	return (
 		<section className={styles.forms}>
 			<div className={`${styles.container}`}>
-				<div className={`${styles.row} flex justify-between`}>
+				<div className={`${styles.row} flex justify-between flex-wrap`}>
 					<LoginForm />
 					<RegisterForm />
 				</div>

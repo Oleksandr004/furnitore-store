@@ -7,3 +7,9 @@
 	margin: 0 auto;
 	padding: 0 15px;
 }
+@media (max-width: 936px) {
+	.row {
+		justify-content: center;
+		gap: 40px;
+	}
+}
