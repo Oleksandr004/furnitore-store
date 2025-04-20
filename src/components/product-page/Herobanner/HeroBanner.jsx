@@ -87,7 +87,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 				</div>
 				<div className={`${styles.body} mt-8 flex justify-between flex-wrap`}>
 					<div className={`${styles.img}`}>
-						<Image
+						<img
 							height={500}
 							width={423}
 							src={`${baseUrl}${imageUrl}`}
