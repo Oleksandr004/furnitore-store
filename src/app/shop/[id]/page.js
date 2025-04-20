@@ -15,7 +15,7 @@ const ProductPage = () => {
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				const baseUrl = window.location.origin // автоматически берёт текущий домен
+				const baseUrl = window.location.origin
 				const response = await fetch(`${baseUrl}/api/products/${id}`)
 				if (!response.ok) {
 					throw new Error('Failed to fetch')
@@ -34,7 +34,19 @@ const ProductPage = () => {
 		return <p>Error: {error}</p>
 	}
 	if (!product) {
-		return <p>Loading...</p>
+		return (
+			<p
+				style={{
+					fontSize: 20,
+					display: 'flex',
+					flex: 1,
+					justifyContent: 'center',
+					marginTop: 50,
+				}}
+			>
+				Loading...
+			</p>
+		)
 	}
 
 	return (

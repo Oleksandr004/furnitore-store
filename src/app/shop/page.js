@@ -15,9 +15,11 @@ export default function Shop() {
 
 	const [products, setProducts] = useState([])
 	const [totalPages, setTotalPages] = useState(0)
+	const [isLoading, setIsLoading] = useState(true)
 
 	const fetchProducts = async () => {
 		try {
+			setIsLoading(true)
 			const response = await fetch(
 				`/api/products?limit=${filters.limit}&page=${filters.page}`
 			)
@@ -27,6 +29,8 @@ export default function Shop() {
 		} catch (error) {
 			console.error('Ошибка при загрузке товаров:', error)
 			setProducts([])
+		} finally {
+			setIsLoading(false)
 		}
 	}
 
@@ -44,6 +48,7 @@ export default function Shop() {
 				totalPages={totalPages}
 				filters={filters}
 				setFilters={setFilters}
+				isLoading={isLoading}
 			/>
 			<InfoRow />
 			<Footer />

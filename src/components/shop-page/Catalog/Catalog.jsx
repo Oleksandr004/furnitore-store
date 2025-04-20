@@ -4,7 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const Catalog = ({ products = [], totalPages, filters, setFilters }) => {
+const Catalog = ({
+	products = [],
+	totalPages,
+	filters,
+	setFilters,
+	isLoading,
+}) => {
 	const handlePageChange = (page) => {
 		setFilters((prevFilters) => ({
 			...prevFilters,
@@ -23,7 +29,16 @@ const Catalog = ({ products = [], totalPages, filters, setFilters }) => {
 		<section className={`${styles.catalog} mb-24`}>
 			<div className={`${styles.container}`}>
 				<div className={`${styles.grid} mb-28`}>
-					{products.length > 0 ? (
+					{isLoading ? (
+						<p
+							style={{
+								fontSize: 20,
+								marginTop: 20,
+							}}
+						>
+							Products are loading...
+						</p>
+					) : products.length > 0 ? (
 						products.map((product) => (
 							<MotionLink
 								whileHover={{ scale: 1.1 }}
@@ -45,7 +60,7 @@ const Catalog = ({ products = [], totalPages, filters, setFilters }) => {
 							</MotionLink>
 						))
 					) : (
-						<p>Нет доступных товаров.</p>
+						<p>No products available</p>
 					)}
 				</div>
 
