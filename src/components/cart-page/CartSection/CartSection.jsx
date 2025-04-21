@@ -28,40 +28,52 @@ const CartSection = () => {
 							<p>Quantity</p>
 							<p>Subtotal</p>
 						</div>
-						{items.map((item) => (
-							<ul key={item.id}>
-								<li className={`${styles.products_list} `}>
-									<div className={`flex items-center`}>
-										<Image
-											className={styles.products_list_img}
-											src={item.imageUrl}
-											height={106}
-											width={106}
-											alt=''
-										/>
-										<p className={`${styles.name} mb-2`}>{item.product.name}</p>
-									</div>
-									<p className={styles.price}>Rs.{item.price}</p>
-									<p className={styles.quantity}>{item.quantity}</p>
-									<p className={styles.subtotal_items}>
-										Rs.
-										{parseFloat(item.price.replace(/,/g, '')) * item.quantity}
-									</p>
-									<button
-										onClick={() => deleteItem(item.id)}
-										className={styles.remove_btn}
-									>
-										<Image
-											src='/images/icons/remove.png'
-											height={22}
-											width={21}
-											alt=''
-										/>
-									</button>
-									<div className={styles.line} />
-								</li>
-							</ul>
-						))}
+						{items.length > 0 ? (
+							items.map((item) => (
+								<ul key={item.id}>
+									<li className={`${styles.products_list} `}>
+										<div className={`flex items-center`}>
+											<Image
+												className={styles.products_list_img}
+												src={item.imageUrl}
+												height={106}
+												width={106}
+												alt=''
+											/>
+											<p className={`${styles.name} mb-2`}>
+												{item.product.name}
+											</p>
+										</div>
+										<p className={styles.price}>Rs.{item.price}</p>
+										<p className={styles.quantity}>{item.quantity}</p>
+										<p className={styles.subtotal_items}>
+											Rs.
+											{parseFloat(item.price.replace(/,/g, '')) * item.quantity}
+										</p>
+										<button
+											onClick={() => deleteItem(item.id)}
+											className={styles.remove_btn}
+										>
+											<Image
+												src='/images/icons/remove.png'
+												height={22}
+												width={21}
+												alt=''
+											/>
+										</button>
+										<div className={styles.line} />
+									</li>
+								</ul>
+							))
+						) : (
+							<p
+								style={{
+									fontSize: 20,
+								}}
+							>
+								There are no products in the cart
+							</p>
+						)}
 					</div>
 					<div className={styles.total_card}>
 						<h2 className={styles.total_card_title}>Cart Totals</h2>
