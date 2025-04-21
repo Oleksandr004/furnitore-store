@@ -59,6 +59,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 999;
 	.nav {
 		display: flex;
 		flex-direction: column;
@@ -75,7 +76,6 @@
 	.container {
 		display: block;
 		margin: 0 auto;
-		// justify-content: start;
 	}
 }
 
