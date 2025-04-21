@@ -30,11 +30,17 @@ const CartSection = () => {
 						</div>
 						{items.map((item) => (
 							<ul key={item.id}>
-								<li
-									className={`${styles.products_list} flex gap-10 items-center`}
-								>
-									<Image src={item.imageUrl} height={106} width={106} alt='' />
-									<p className={`${styles.name} mb-2`}>{item.product.name}</p>
+								<li className={`${styles.products_list} `}>
+									<div className={`flex items-center`}>
+										<Image
+											className={styles.products_list_img}
+											src={item.imageUrl}
+											height={106}
+											width={106}
+											alt=''
+										/>
+										<p className={`${styles.name} mb-2`}>{item.product.name}</p>
+									</div>
 									<p className={styles.price}>Rs.{item.price}</p>
 									<p className={styles.quantity}>{item.quantity}</p>
 									<p className={styles.subtotal_items}>
@@ -52,6 +58,7 @@ const CartSection = () => {
 											alt=''
 										/>
 									</button>
+									<div className={styles.line} />
 								</li>
 							</ul>
 						))}
