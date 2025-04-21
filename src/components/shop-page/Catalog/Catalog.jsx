@@ -53,9 +53,7 @@ const Catalog = ({
 									src={product.imageUrl}
 									alt={product.name}
 								/>
-								<h3 className={`${styles.name} mt-4 mb-3`}>
-									<Link href={`/shop/${product._id}`}>{product.name}</Link>
-								</h3>
+								<h3 className={`${styles.name} mt-4 mb-3`}>{product.name}</h3>
 								<p className={`${styles.price}`}>{`Rs. ${product.price}`}</p>
 							</MotionLink>
 						))
