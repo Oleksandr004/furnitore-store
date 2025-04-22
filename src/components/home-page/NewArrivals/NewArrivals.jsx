@@ -3,8 +3,10 @@ import styles from '@/components/home-page/NewArrivals/NewArrivals.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const MotionImg = motion(Image)
+const MotionLink = motion(Link)
 
 const NewArrivals = () => {
 	const [isMobile, setIsMobile] = useState(false)
@@ -45,7 +47,8 @@ const NewArrivals = () => {
 						>
 							New Arrivals<span>Asgaard sofa</span>
 						</motion.p>
-						<motion.button
+						<MotionLink
+							href='/shop/672bd1240eece6e60a54002f'
 							initial={
 								isMobile ? { x: 0, opacity: 0 } : { x: -100, opacity: 0 }
 							}
@@ -58,8 +61,8 @@ const NewArrivals = () => {
 							}
 							className={`${styles.order_btn}`}
 						>
-							<a href='#!'>Order Now</a>
-						</motion.button>
+							<p>Order Now</p>
+						</MotionLink>
 					</div>
 				</div>
 			</div>

@@ -10,6 +10,8 @@ const poppins = Poppins({
 	subsets: ['latin'],
 })
 
+const MotionLink = motion(Link)
+
 const TopPick = () => {
 	return (
 		<section className={`${styles.top_pick} ${poppins.className}`}>
@@ -44,7 +46,8 @@ const TopPick = () => {
 			</motion.p>
 			<div className={`${styles.container}`}>
 				<div className={styles.grid}>
-					<motion.div
+					<MotionLink
+						href='/shop/672bd1240eece6e60a540022'
 						whileHover={{
 							scale: 1.1,
 						}}
@@ -57,8 +60,9 @@ const TopPick = () => {
 						/>
 						<p className={styles.name}>Trenton modular sofa_3</p>
 						<p className={styles.price}>Rs. 25,000.00</p>
-					</motion.div>
-					<motion.div
+					</MotionLink>
+					<MotionLink
+						href='/shop/672bd1240eece6e60a540023'
 						whileHover={{
 							scale: 1.1,
 						}}
@@ -73,9 +77,10 @@ const TopPick = () => {
 							Granite dining table with <br /> dining chair
 						</p>
 						<p className={styles.price}>Rs. 25,000.00</p>
-					</motion.div>
+					</MotionLink>
 
-					<motion.div
+					<MotionLink
+						href='/shop/672bd1240eece6e60a540024'
 						whileHover={{
 							scale: 1.1,
 						}}
@@ -90,9 +95,10 @@ const TopPick = () => {
 							Outdoor bar table and <br /> stool
 						</p>
 						<p className={styles.price}>Rs. 25,000.00</p>
-					</motion.div>
+					</MotionLink>
 
-					<motion.div
+					<MotionLink
+						href='/shop/672bd1240eece6e60a540025'
 						whileHover={{
 							scale: 1.1,
 						}}
@@ -107,7 +113,7 @@ const TopPick = () => {
 							Plain console with teak <br /> mirror
 						</p>
 						<p className={styles.price}>Rs. 25,000.00</p>
-					</motion.div>
+					</MotionLink>
 				</div>
 				<Link
 					href='/shop'

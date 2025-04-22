@@ -4,12 +4,11 @@
 	padding: 0 15px;
 }
 .title {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-family: Poppins;
 	font-size: clamp(18px, 1.881vw, 24px);
 	font-weight: 500;
-	line-height: 36px;
-	letter-spacing: 0%;
+	line-height: 1.5;
 	text-align: center;
 	margin-top: 217px;
 	span {
@@ -26,13 +25,13 @@
 	margin: 33px auto 0;
 	width: clamp(180px, 19.984vw, 255px);
 	height: clamp(45px, 5.016vw, 64px);
-	a {
+	p {
 		font-family: Poppins;
-		font-size: 20px;
 		font-size: clamp(16px, 1.567vw, 20px);
 		font-weight: 400;
-		line-height: 30px;
+		line-height: 1.5;
 		text-align: center;
+		padding-top: clamp(10px, 1vw, 16px);
 	}
 }
 @media (max-width: 956px) {
@@ -49,7 +48,6 @@
 		margin: 20px 0 0;
 	}
 	.order_btn {
-		margin: 0 auto;
 		margin: 10px auto 0;
 	}
 }

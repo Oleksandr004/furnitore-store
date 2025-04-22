@@ -19,14 +19,14 @@
 	margin-bottom: 69px;
 }
 .name {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	margin: 14px 0px 11px;
 }
 .price {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-size: 24px;
 	font-size: clamp(20px, 2.2vw, 24px);
 	font-weight: 500;
@@ -35,8 +35,13 @@
 .line {
 	width: 115px;
 	height: 0;
-	border: 2px solid rgb(0, 0, 0);
+	border: 2px solid black;
 	margin: 0 auto 80px auto;
+}
+.link {
+	display: block;
+	max-width: 103.65px;
+	margin: 0 auto 20px;
 }
 @media (max-width: 1128px) {
 	.grid {
@@ -54,9 +59,4 @@
 		grid-template-columns: repeat(1, 220px);
 		margin-bottom: 40px;
 	}
-}
-.link {
-	display: block;
-	max-width: 103.65px;
-	margin: 0 auto 20px;
 }

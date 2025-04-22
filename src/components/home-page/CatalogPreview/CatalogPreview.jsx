@@ -3,6 +3,7 @@ import styles from '@/components/home-page/CatalogPreview/CatalogPreview.module.
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const CatalogPreview = () => {
 	const [isMobile, setIsMobile] = useState(false)
@@ -19,7 +20,7 @@ const CatalogPreview = () => {
 
 	return (
 		<section className='bg-[#FAF4F4]'>
-			<div className={`${styles.container} flex `}>
+			<div className={`${styles.container} flex flex-wrap justify-between`}>
 				<motion.div
 					initial={isMobile ? { x: 0 } : { x: -100 }}
 					whileInView={isMobile ? { x: 0 } : { x: 0 }}
@@ -31,10 +32,12 @@ const CatalogPreview = () => {
 						src='/images/main-page/left-table.png'
 						height={289}
 						width={435}
-						alt='right-img'
+						alt='left side table'
 					/>
 					<p className={`${styles.title_left}`}>Side table</p>
-					<p className={`${styles.subtitle}`}>View More</p>
+					<Link href='/shop' className={`${styles.subtitle}`}>
+						View More
+					</Link>
 					<div className={`${styles.line}`} />
 				</motion.div>
 				<motion.div
@@ -48,10 +51,12 @@ const CatalogPreview = () => {
 						src='/images/main-page/right-table.png'
 						height={289}
 						width={435}
-						alt='right-img'
+						alt='right side table'
 					/>
 					<p className={`${styles.title_right}`}>Side table</p>
-					<p className={`${styles.subtitle}`}>View More</p>
+					<Link href='/shop' className={`${styles.subtitle}`}>
+						View More
+					</Link>
 					<div className={`${styles.line}`} />
 				</motion.div>
 			</div>

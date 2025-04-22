@@ -29,7 +29,7 @@
 	font-family: Poppins;
 	font-size: 24px;
 	font-weight: 700;
-	line-height: 36px;
+	line-height: 1.5;
 	letter-spacing: 0%;
 	text-align: left;
 }
@@ -37,7 +37,7 @@
 	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 1.5;
 	margin-top: 20px;
 }
 .line {
@@ -51,19 +51,17 @@
 	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 300;
-	line-height: 24px;
-	letter-spacing: 0%;
+	line-height: 1.5;
 	text-align: justify;
 	margin-top: 11px;
 	margin-bottom: 25px;
 }
 .privacy_policy {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 24px;
-	letter-spacing: 0%;
 	text-align: justify;
 	margin-top: 22px;
 	a {
@@ -80,7 +78,7 @@
 }
 
 .payment_option input[type='radio']:checked + span {
-	color: rgb(0, 0, 0);
+	color: black;
 	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 400;
@@ -112,7 +110,7 @@
 	text-align: center;
 	width: 318px;
 	height: 64px;
-	border: 1px solid rgb(0, 0, 0);
+	border: 1px solid black;
 	border-radius: 15px;
 	display: block;
 	margin: 39px auto 0;

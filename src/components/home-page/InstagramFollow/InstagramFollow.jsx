@@ -1,6 +1,7 @@
 'use client'
 import styles from '@/components/home-page/InstagramFollow/InstagramFollow.module.scss'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const InstagramFollow = () => {
 	return (
@@ -37,7 +38,7 @@ const InstagramFollow = () => {
 				whileHover={{ scale: 1.15, border: '1px solid #000000' }}
 				className={`${styles.follow_btn}`}
 			>
-				<a href='#!'>Follow Us</a>
+				<Link href='#!'>Follow Us</Link>
 			</motion.button>
 		</section>
 	)

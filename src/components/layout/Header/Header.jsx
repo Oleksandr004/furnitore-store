@@ -4,6 +4,7 @@ import styles from '@/components/layout/Header/Header.module.scss'
 import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const poppins = Poppins({
 	weight: ['400', '500', '600', '700'],
@@ -12,24 +13,14 @@ const poppins = Poppins({
 
 const MotionLink = ({ href, children, ...props }) => {
 	return (
-		<Link href={href} passHref>
+		<Link href={href}>
 			<motion.div {...props}>{children}</motion.div>
-		</Link>
-	)
-}
-
-const MotionImg = ({ href, src, alt }) => {
-	return (
-		<Link href={href} passHref>
-			<motion.img src={src} alt={alt} />
 		</Link>
 	)
 }
 
 const Header = ({ background }) => {
 	const [isActive, setIsActive] = useState(false)
-	const burgerMenuRef = useRef(null)
-	const headerRef = useRef(null)
 
 	useEffect(() => {
 		if (isActive) {
@@ -45,14 +36,13 @@ const Header = ({ background }) => {
 
 	return (
 		<header
-			ref={headerRef}
 			className={`${poppins.className} ${background} ${
 				isActive ? styles.header_active : ''
 			}`}
 		>
 			<div className={`flex justify-between ${styles.container}`}>
 				<div className={styles.helper} />
-				<nav className={styles.nav}>
+				<nav>
 					<ul className={`flex ${styles.nav}`}>
 						<li>
 							<MotionLink whileHover={{ scale: 1.3 }} href='/'>
@@ -80,38 +70,50 @@ const Header = ({ background }) => {
 					<ul className={`flex gap-12 ${styles.icons_row}`}>
 						<li>
 							<Link href='/auth'>
-								<motion.img
-									whileHover={{ scale: 1.3 }}
-									src='/images/icons/account.png'
-									alt=''
-								/>
+								<motion.div whileHover={{ scale: 1.3 }}>
+									<Image
+										src='/images/icons/account.png'
+										alt='profile account logo'
+										height={19}
+										width={24}
+									/>
+								</motion.div>
 							</Link>
 						</li>
 						<li>
-							<a href='#!'>
-								<motion.img
-									whileHover={{ scale: 1.3 }}
-									src='/images/icons/search.png'
-									alt=''
-								/>
-							</a>
+							<Link href='#!'>
+								<motion.div whileHover={{ scale: 1.3 }}>
+									<Image
+										width={25}
+										height={25}
+										src='/images/icons/search.png'
+										alt='search logo'
+									/>
+								</motion.div>
+							</Link>
 						</li>
 						<li>
-							<a href='#!'>
-								<motion.img
-									whileHover={{ scale: 1.3 }}
-									src='/images/icons/wish.png'
-									alt=''
-								/>
-							</a>
+							<Link href='#!'>
+								<motion.div whileHover={{ scale: 1.3 }}>
+									<Image
+										src='/images/icons/wish.png'
+										alt='wishlist logo'
+										height={23}
+										width={26}
+									/>
+								</motion.div>
+							</Link>
 						</li>
 						<li>
 							<Link href='/cart'>
-								<motion.img
-									whileHover={{ scale: 1.3 }}
-									src='/images/icons/basket.png'
-									alt=''
-								/>
+								<motion.div whileHover={{ scale: 1.3 }}>
+									<Image
+										src='/images/icons/basket.png'
+										alt='shopping cart logo'
+										height={23}
+										width={25}
+									/>
+								</motion.div>
 							</Link>
 						</li>
 					</ul>
@@ -119,14 +121,13 @@ const Header = ({ background }) => {
 			</div>
 			<div
 				onClick={handleBurgerMenu}
-				ref={burgerMenuRef}
 				className={`${styles.burger_menu} ${
 					isActive ? styles.burger_active : ''
 				}`}
 			>
-				<span></span>
-				<span></span>
-				<span></span>
+				<span />
+				<span />
+				<span />
 			</div>
 		</header>
 	)

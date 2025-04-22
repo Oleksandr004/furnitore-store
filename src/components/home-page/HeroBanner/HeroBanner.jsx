@@ -72,7 +72,7 @@ const HeroBanner = () => {
 					className={style.main__img}
 					style={{ left: 100 }}
 					src='/images/main-page/main-chair.png'
-					alt='main-chair'
+					alt='main chair'
 					height={653}
 					width={653}
 				/>

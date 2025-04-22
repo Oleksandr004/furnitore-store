@@ -20,7 +20,7 @@ const Footer = () => {
 								<Link href='/shop'>Shop</Link>
 							</li>
 							<li>
-								<a href='#!'>About</a>
+								<Link href='#!'>About</Link>
 							</li>
 							<li>
 								<Link href='/contact'>Contact</Link>
@@ -31,13 +31,13 @@ const Footer = () => {
 						<p className={`${styles.help_title}`}>Help</p>
 						<ul className={`${styles.help_list} flex flex-col`}>
 							<li>
-								<a href='#!'>Payment Options</a>
+								<Link href='#!'>Payment Options</Link>
 							</li>
 							<li>
-								<a href='#!'>Returns</a>
+								<Link href='#!'>Returns</Link>
 							</li>
 							<li>
-								<a href='#!'>Privacy Policies</a>
+								<Link href='#!'>Privacy Policies</Link>
 							</li>
 						</ul>
 					</div>
