@@ -14,18 +14,18 @@
 .title_right {
 	color: black;
 	font-family: Poppins;
-	font-size: clamp(24px, 2.903vw, 36px);
+	font-size: clamp(1.5rem, 2.903vw, 2.25rem);
 	font-weight: 500;
-	line-height: clamp(36px, 4.355vw, 54px);
+	line-height: 1.5;
 	margin-bottom: 23px;
 }
 
 .subtitle {
 	color: black;
 	font-family: Poppins;
-	font-size: clamp(18px, 1.935vw, 24px);
+	font-size: clamp(1.125rem, 1.935vw, 1.5rem);
 	font-weight: 500;
-	line-height: clamp(24px, 2.903vw, 36px);
+	line-height: 1.5;
 	margin-bottom: 13px;
 }
 .line {

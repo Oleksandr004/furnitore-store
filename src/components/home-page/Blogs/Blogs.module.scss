@@ -1,11 +1,11 @@
 .title {
-	font-size: clamp(28px, 2.903vw, 36px);
+	font-size: clamp(1.75rem, 2.903vw, 2.25rem);
 	font-weight: 500;
 	line-height: 1.5;
 }
 .subtitle {
 	color: rgb(159, 159, 159);
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.5;
 	margin-bottom: clamp(20px, 5.161vw, 64px);
@@ -17,8 +17,7 @@
 
 .name {
 	font-family: Poppins;
-	font-size: 20px;
-	font-size: clamp(16px, 1.613vw, 20px);
+	font-size: clamp(1rem, 1.613vw, 1.25rem);
 	font-weight: 400;
 	line-height: 1.5;
 	text-align: center;
@@ -26,7 +25,7 @@
 }
 .read_more {
 	font-family: Poppins;
-	font-size: clamp(18px, 1.935vw, 24px);
+	font-size: clamp(1.125rem, 1.935vw, 1.5rem);
 	font-weight: 500;
 	line-height: 1.5;
 	text-align: center;
@@ -44,19 +43,19 @@
 }
 .date {
 	font-family: Poppins;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5;
 }
 .time {
 	font-family: Poppins;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5;
 }
 .all_post_link {
 	font-family: Poppins;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1.5;
 	display: block;

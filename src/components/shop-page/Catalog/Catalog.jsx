@@ -20,11 +20,16 @@ const Catalog = ({
 
 	const MotionLink = ({ href, children, ...props }) => {
 		return (
-			<Link href={href} passHref>
+			<Link href={href}>
 				<motion.div {...props}>{children}</motion.div>
 			</Link>
 		)
 	}
+
+	const formatPrice = (price) => {
+		return new Intl.NumberFormat('en-US').format(price)
+	}
+
 	return (
 		<section className={`${styles.catalog} mb-24`}>
 			<div className={`${styles.container}`}>
@@ -54,7 +59,9 @@ const Catalog = ({
 									alt={product.name}
 								/>
 								<h3 className={`${styles.name} mt-4 mb-3`}>{product.name}</h3>
-								<p className={`${styles.price}`}>{`Rs. ${product.price}`}</p>
+								<p className={`${styles.price}`}>{`Rs. ${formatPrice(
+									product.price
+								)}.00`}</p>
 							</MotionLink>
 						))
 					) : (
@@ -79,16 +86,20 @@ const Catalog = ({
 							{page}
 						</motion.button>
 					))}
-					<motion.button
-						whileHover={{
-							border: '2px solid #000000',
-						}}
-						transition={{ duration: 0 }}
-						className={`${styles.btn_next} ${totalPages === 1 ? 'hidden' : ''}`}
-						onClick={() => setFilters({ ...filters, page: filters.page + 1 })}
-					>
-						Next
-					</motion.button>
+					{isLoading ? null : (
+						<motion.button
+							whileHover={{
+								border: '2px solid #000000',
+							}}
+							transition={{ duration: 0 }}
+							className={`${styles.btn_next} ${
+								totalPages === 1 ? 'hidden' : ''
+							}`}
+							onClick={() => setFilters({ ...filters, page: filters.page + 1 })}
+						>
+							Next
+						</motion.button>
+					)}
 				</div>
 			</div>
 		</section>

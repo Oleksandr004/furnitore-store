@@ -21,7 +21,9 @@ export default function Shop() {
 		try {
 			setIsLoading(true)
 			const response = await fetch(
-				`/api/products?limit=${filters.limit}&page=${filters.page}`
+				`/api/products?limit=${filters.limit}&page=${filters.page}&sort=${
+					filters.sort || ''
+				}`
 			)
 			const data = await response.json()
 			setTotalPages(data.totalPages || 0)
@@ -42,7 +44,11 @@ export default function Shop() {
 		<>
 			<Header />
 			<HeroBanner title='Shop' href='/shop' />
-			<FilterBar filters={filters} setFilters={setFilters} />
+			<FilterBar
+				filters={filters}
+				setFilters={setFilters}
+				products={products}
+			/>
 			<Catalog
 				products={products}
 				totalPages={totalPages}

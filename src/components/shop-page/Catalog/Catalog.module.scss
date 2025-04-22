@@ -10,15 +10,15 @@
 }
 .name {
 	font-family: Poppins;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 1.5;
 }
 .price {
 	font-family: Poppins;
-	font-size: clamp(20px, 1.887vw, 24px);
+	font-size: clamp(1.25rem, 1.887vw, 1.5rem);
 	font-weight: 500;
-	line-height: 36px;
+	line-height: 1.5;
 }
 .btn,
 .btn_next {
@@ -27,9 +27,9 @@
 	border-radius: 10px;
 	background: rgb(255, 249, 230);
 	font-family: Poppins;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 400;
-	line-height: 30px;
+	line-height: 1.5;
 }
 .active {
 	background-color: #fbebb5;

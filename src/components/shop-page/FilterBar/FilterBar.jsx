@@ -1,8 +1,8 @@
-// 'use client'
+'use client'
 import styles from '@/components/shop-page/FilterBar/FilterBar.module.scss'
 import Image from 'next/image'
 
-const FilterBar = ({ filters, setFilters }) => {
+const FilterBar = ({ filters, setFilters, products }) => {
 	const handleLimitChange = (event) => {
 		setFilters({ ...filters, limit: event.target.value, page: 1 })
 	}
@@ -39,7 +39,7 @@ const FilterBar = ({ filters, setFilters }) => {
 						/>
 						<div className={`${styles.line}`} />
 						<p className={`${styles.showing_title}`}>
-							Showing 1–{filters.limit} of {filters.totalResults || 0} results
+							Showing 1–{filters.limit} of {products.length || 0} results
 						</p>
 					</div>
 					<div className={`${styles.right_row}  flex gap-8`}>
@@ -57,10 +57,19 @@ const FilterBar = ({ filters, setFilters }) => {
 						</div>
 						<div className={`${styles.short} flex gap-4`}>
 							<p className={`${styles.short_title}`}>Short by</p>
-							<select id='limit-sort'>
+							<select
+								id='limit-sort'
+								onChange={(e) => {
+									setFilters({
+										...filters,
+										sort: e.target.value,
+										page: 1,
+									})
+								}}
+							>
 								<option value='default'>default</option>
-								<option value='default2'>default2</option>
-								<option value='default3'>default3</option>
+								<option value='price_down'>price down</option>
+								<option value='price_up'>price up</option>
 							</select>
 						</div>
 					</div>

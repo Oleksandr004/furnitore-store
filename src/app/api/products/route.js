@@ -9,12 +9,23 @@ export async function GET(request) {
 		const { searchParams } = new URL(request.url)
 		const limit = parseInt(searchParams.get('limit') || '16') // Лимит товаров на страницу
 		const page = parseInt(searchParams.get('page') || '1') // Номер текущей страницы
+		const sort = searchParams.get('sort') || 'default'
 
 		// Вычисляем, сколько товаров пропустить
 		const skip = (page - 1) * limit
 
+		let sortOptions = {}
+		if (sort === 'price_down') {
+			sortOption.price = 1
+		} else if (sort === 'price_up') {
+			sortOption.price = -1
+		}
+
 		// Получаем товары с учётом пагинации
-		const products = await Products.find({}).skip(skip).limit(limit)
+		const products = await Products.find({})
+			.sort(sortOptions)
+			.skip(skip)
+			.limit(limit)
 
 		// Подсчитываем общее количество товаров
 		const totalProducts = await Products.countDocuments()
