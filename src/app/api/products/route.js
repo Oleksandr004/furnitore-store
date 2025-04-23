@@ -16,9 +16,9 @@ export async function GET(request) {
 
 		let sortOptions = {}
 		if (sort === 'price_down') {
-			sortOption.price = 1
+			sortOptions.price = 1
 		} else if (sort === 'price_up') {
-			sortOption.price = -1
+			sortOptions.price = -1
 		}
 
 		// Получаем товары с учётом пагинации
