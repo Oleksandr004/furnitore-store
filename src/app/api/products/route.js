@@ -15,9 +15,9 @@ export async function GET(request) {
 		const skip = (page - 1) * limit
 
 		let sortOptions = {}
-		if (sort === 'price_down') {
+		if (sort === 'price_up') {
 			sortOptions.price = 1
-		} else if (sort === 'price_up') {
+		} else if (sort === 'price_down') {
 			sortOptions.price = -1
 		}
 

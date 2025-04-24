@@ -12,10 +12,11 @@ export default function Shop() {
 		page: 1,
 		limit: 16,
 	})
-
 	const [products, setProducts] = useState([])
 	const [totalPages, setTotalPages] = useState(0)
 	const [isLoading, setIsLoading] = useState(true)
+	const [viewType, setViewType] = useState('grid')
+	const [totalProducts, setTotalProducts] = useState(0)
 
 	const fetchProducts = async () => {
 		try {
@@ -28,8 +29,9 @@ export default function Shop() {
 			const data = await response.json()
 			setTotalPages(data.totalPages || 0)
 			setProducts(data.products || [])
+			setTotalProducts(data.length)
 		} catch (error) {
-			console.error('Ошибка при загрузке товаров:', error)
+			console.error('Error loading products:', error)
 			setProducts([])
 		} finally {
 			setIsLoading(false)
@@ -48,6 +50,9 @@ export default function Shop() {
 				filters={filters}
 				setFilters={setFilters}
 				products={products}
+				setViewType={setViewType}
+				totalProducts={totalProducts}
+				isLoading={isLoading}
 			/>
 			<Catalog
 				products={products}
@@ -55,6 +60,7 @@ export default function Shop() {
 				filters={filters}
 				setFilters={setFilters}
 				isLoading={isLoading}
+				viewType={viewType}
 			/>
 			<InfoRow />
 			<Footer />

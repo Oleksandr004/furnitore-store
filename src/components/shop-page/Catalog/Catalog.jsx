@@ -10,6 +10,7 @@ const Catalog = ({
 	filters,
 	setFilters,
 	isLoading,
+	viewType,
 }) => {
 	const handlePageChange = (page) => {
 		setFilters((prevFilters) => ({
@@ -33,7 +34,8 @@ const Catalog = ({
 	return (
 		<section className={`${styles.catalog} mb-24`}>
 			<div className={`${styles.container}`}>
-				<div className={`${styles.grid} mb-28`}>
+				{/* <div className={`${styles.grid} mb-28`}> */}
+				<div className={viewType === 'grid' ? styles.grid : styles.flex}>
 					{isLoading ? (
 						<p
 							style={{
@@ -95,7 +97,11 @@ const Catalog = ({
 							className={`${styles.btn_next} ${
 								totalPages === 1 ? 'hidden' : ''
 							}`}
-							onClick={() => setFilters({ ...filters, page: filters.page + 1 })}
+							onClick={() => {
+								if (filters.page < totalPages) {
+									setFilters({ ...filters, page: filters.page + 1 })
+								}
+							}}
 						>
 							Next
 						</motion.button>

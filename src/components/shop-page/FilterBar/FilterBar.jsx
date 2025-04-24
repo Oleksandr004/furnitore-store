@@ -2,10 +2,20 @@
 import styles from '@/components/shop-page/FilterBar/FilterBar.module.scss'
 import Image from 'next/image'
 
-const FilterBar = ({ filters, setFilters, products }) => {
+const FilterBar = ({
+	filters,
+	setFilters,
+	products,
+	setViewType,
+	totalProducts,
+	isLoading,
+}) => {
 	const handleLimitChange = (event) => {
-		setFilters({ ...filters, limit: event.target.value, page: 1 })
+		setFilters({ ...filters, limit: parseInt(event.target.value), page: 1 })
 	}
+
+	const start = (filters.page - 1) * filters.limit + 1
+	const end = Math.min(filters.page * filters.limit, totalProducts)
 
 	return (
 		<section className={`mt-12 bg-[#FAF4F4]`}>
@@ -15,7 +25,7 @@ const FilterBar = ({ filters, setFilters, products }) => {
 						<Image
 							className={`${styles.settings_filter_img}`}
 							src='/images/icons/filter.png'
-							alt='settings.png'
+							alt='row filter'
 							width={19}
 							height={16}
 							style={{ maxHeight: 16 }}
@@ -24,10 +34,11 @@ const FilterBar = ({ filters, setFilters, products }) => {
 						<Image
 							className={`${styles.grid_filter_img}`}
 							src='/images/icons/grid filter.png'
-							alt='settings.png'
+							alt='grid filter'
 							width={16.33}
 							height={16.33}
-							style={{ maxHeight: 16.33 }}
+							style={{ maxHeight: 16.33, cursor: 'pointer' }}
+							onClick={() => setViewType('grid')}
 						/>
 						<Image
 							className={`${styles.row_filter_img} ml-6 mr-8`}
@@ -35,11 +46,16 @@ const FilterBar = ({ filters, setFilters, products }) => {
 							alt='settings.png'
 							width={21}
 							height={19.5}
-							style={{ maxHeight: 19.5 }}
+							style={{ maxHeight: 19.5, cursor: 'pointer' }}
+							onClick={() => setViewType('row')}
 						/>
 						<div className={`${styles.line}`} />
 						<p className={`${styles.showing_title}`}>
-							Showing 1–{filters.limit} of {products.length || 0} results
+							{isLoading
+								? 'Loading...'
+								: totalProducts > 0
+								? `Showing ${start}–${end} of ${totalProducts} results`
+								: 'No results found'}
 						</p>
 					</div>
 					<div className={`${styles.right_row}  flex gap-8`}>
