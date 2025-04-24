@@ -36,5 +36,3 @@ cd furnitore-store
 npm install
 npm run dev
 ```
-
-Translated with DeepL.com (free version)
