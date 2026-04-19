@@ -242,7 +242,7 @@ export async function POST(req) {
 
 ## 🟠 СЕРЬЁЗНЫЕ ПРОБЛЕМЫ (должны быть исправлены в скором времени)
 
-### 5. ❌ Отсутствие TypeScript
+<!-- ### 5. ❌ Отсутствие TypeScript
 
 **Весь проект**
 
@@ -278,7 +278,7 @@ const userSchema = new mongoose.Schema<IUser>({
 })
 
 export default mongoose.model<IUser>('User', userSchema)
-```
+``` -->
 
 ---
 

@@ -20,7 +20,7 @@ const RelatedProducts = () => {
 								height={274.5}
 								width={274.5}
 								src='/images/items/Trenton modular sofa_3.png'
-								alt=''
+								alt='Trenton modular sofa_3 image'
 							/>
 							<p className={`${styles.name}`}>Trenton modular sofa_3</p>
 							<p className={`${styles.price}`}>Rs. 25,000.00</p>
@@ -34,7 +34,7 @@ const RelatedProducts = () => {
 								height={274.5}
 								width={274.5}
 								src='/images/items/Granite dining table with dining chair.png'
-								alt=''
+								alt='image Granite dining table with dining chair'
 							/>
 							<p className={`${styles.name}`}>
 								Granite dining table with <br /> dining chair
@@ -50,7 +50,7 @@ const RelatedProducts = () => {
 								height={274.5}
 								width={274.5}
 								src='/images/items/Outdoor bar table and stool.png'
-								alt=''
+								alt='Outdoor bar table and stool image'
 							/>
 							<p className={`${styles.name}`}>
 								Outdoor bar table and <br /> stool
@@ -66,7 +66,7 @@ const RelatedProducts = () => {
 								height={274.5}
 								width={274.5}
 								src='/images/items/Plain console with teak mirror.png'
-								alt=''
+								alt='Plain console with teak mirror image'
 							/>
 							<p className={`${styles.name}`}>
 								Plain console with teak <br /> mirror

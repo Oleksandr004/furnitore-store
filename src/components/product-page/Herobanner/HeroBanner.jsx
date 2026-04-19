@@ -5,8 +5,9 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addItem } from '@/store/features/cart/cartSlise'
 import CartPopup from '@/components/ui/CartPopup/CartPopup'
-import Image from 'next/image'
+
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 	const [activeSize, setActiveSize] = useState('L')
@@ -33,7 +34,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 				product: { name: name },
 				price: price,
 				imageUrl: imageUrl,
-			})
+			}),
 		)
 		setIsPopUpOpen(true)
 	}
@@ -62,7 +63,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					>
 						Home
 					</MotionLink>
-					<img
+					<Image
 						className='ml-5 mr-7'
 						src={`${baseUrl}/images/icons/arrow.png`}
 						alt='arrow img'
@@ -77,7 +78,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					>
 						Shop
 					</MotionLink>
-					<img
+					<Image
 						className='ml-7 mr-8'
 						src={`${baseUrl}/images/icons/arrow.png`}
 						alt='arrow img'
@@ -87,7 +88,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 				</div>
 				<div className={`${styles.body} mt-8 flex justify-between flex-wrap`}>
 					<div className={`${styles.img}`}>
-						<img
+						<Image
 							height={500}
 							width={423}
 							src={`${baseUrl}${imageUrl}`}
