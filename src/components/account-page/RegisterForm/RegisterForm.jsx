@@ -9,7 +9,6 @@ const RegisterForm = () => {
 		register,
 		handleSubmit,
 		formState: { errors },
-		watch,
 	} = useForm({ mode: 'onChange' })
 
 	const [isModalOpen, setIsModalOpen] = useState(false)
@@ -22,19 +21,24 @@ const RegisterForm = () => {
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data),
 			})
-			const result = response.json()
+
+			// 1. Извлекаем данные из ответа ОДИН РАЗ
+			const result = await response.json()
+
+			// Теперь в result у нас обычный объект: { message: '...' }
+
 			if (response.ok) {
+				// Статус 200-299
 				setModalMessage(result.message || 'Registration successful!')
-				setIsModalOpen(true)
 			} else {
-				setModalMessage(
-					result.message || 'An error occurred during registration.'
-				)
-				setIsModalOpen(true)
+				setModalMessage(result.message || 'An error occurred.')
 			}
-		} catch (e) {
+
 			setIsModalOpen(true)
-			setModalMessage(e.message || 'Something went wrong. Please try again.')
+		} catch (e) {
+			// Сюда попадем, если нет интернета или сервер вообще не ответил
+			setModalMessage('Network error or server is down.')
+			setIsModalOpen(true)
 		}
 	}
 

@@ -24,8 +24,9 @@ export default function Shop() {
 			const response = await fetch(
 				`/api/products?limit=${filters.limit}&page=${filters.page}&sort=${
 					filters.sort || ''
-				}`
+				}`,
 			)
+
 			const data = await response.json()
 			setTotalPages(data.totalPages || 0)
 			setProducts(data.products || [])

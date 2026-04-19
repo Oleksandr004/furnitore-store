@@ -3,11 +3,13 @@ import styles from '@/components/account-page/LoginForm/LoginFoorm.module.scss'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation'
+import { loginSchema } from '@/lib/zod-schemas'
 
 const LoginForm = () => {
+
 	const router = useRouter()
 
-	const { register, handleSubmit } = useForm({ mode: 'onChange' })
+	const { register, handleSubmit } = useForm({ mode: 'onChange', resolver:  })
 	const [loading, setLoading] = useState(false)
 	const [errorMessage, setErrorMessage] = useState('')
 

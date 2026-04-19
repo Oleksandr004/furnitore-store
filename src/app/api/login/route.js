@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { MongoClient } from 'mongodb'
+import { loginSchema } from '@/lib/zod-schemas'
 
 export async function POST(req) {
 	let client
@@ -8,13 +9,15 @@ export async function POST(req) {
 	try {
 		const body = await req.json()
 
+		const validate = loginSchema.parse(data)
+
 		const { email, password, rememberMe } = body
 		if (!email || !password) {
 			return new Response(
 				JSON.stringify({ message: 'Email and password are required' }),
 				{
 					status: 400,
-				}
+				},
 			)
 		}
 
@@ -24,8 +27,6 @@ export async function POST(req) {
 
 		const user = await userCollection.findOne({ email })
 		if (!user) {
-			console.log('nf')
-
 			return new Response(JSON.stringify({ message: 'User not found' }), {
 				status: 400,
 			})
@@ -47,7 +48,7 @@ export async function POST(req) {
 				JSON.stringify({ message: 'Server configuration error' }),
 				{
 					status: 500,
-				}
+				},
 			)
 		}
 
@@ -57,7 +58,7 @@ export async function POST(req) {
 
 		return new Response(
 			JSON.stringify({ message: 'Login successful', token }),
-			{ status: 200 }
+			{ status: 200 },
 		)
 	} catch (error) {
 		console.error('Server error:', error)
