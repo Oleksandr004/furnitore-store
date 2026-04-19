@@ -39,7 +39,7 @@ const CartPopup = ({ onClose }: TProps) => {
 				<button onClick={() => onClose()}>
 					<Image
 						className='absolute top-9 right-10'
-						src='/images/icons/close popup.png'
+						src='/images/icons/close popup.svg'
 						height={19}
 						width={16.63}
 						alt='close popup icon image'

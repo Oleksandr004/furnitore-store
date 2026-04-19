@@ -33,7 +33,7 @@ const HeroBanner = ({ title, href }: TProps) => {
 					</Link>
 					<Image
 						alt='arrow'
-						src='/images/icons/arrow.png'
+						src='/images/icons/arrow.svg'
 						width={14}
 						height={8}
 					/>

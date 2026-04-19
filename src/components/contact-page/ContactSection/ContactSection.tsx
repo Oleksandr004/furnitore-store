@@ -19,7 +19,7 @@ const ContactSection = () => {
 					>
 						<div className='flex gap-7 items-start'>
 							<Image
-								src='/images/icons/address.png'
+								src='/images/icons/address.svg'
 								alt='address icon image'
 								height={28.18}
 								width={22}
@@ -34,7 +34,7 @@ const ContactSection = () => {
 						</div>
 						<div className='flex gap-7  items-start'>
 							<Image
-								src='/images/icons/phone.png'
+								src='/images/icons/phone.svg'
 								alt='phone icon image'
 								height={22.27}
 								width={22.27}
@@ -49,7 +49,7 @@ const ContactSection = () => {
 						</div>
 						<div className='flex gap-7 items-start'>
 							<Image
-								src='/images/icons/working-time.png'
+								src='/images/icons/working-time.svg'
 								alt='working time icon image'
 								height={23}
 								width={23}

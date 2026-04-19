@@ -74,7 +74,7 @@ const Blogs = () => {
 									<Image
 										width={20}
 										height={24}
-										src='/images/icons/time.png'
+										src='/images/icons/time.svg'
 										alt='reading time icon'
 									/>
 									<p className={styles.time}>{blog.time}</p>
@@ -83,7 +83,7 @@ const Blogs = () => {
 									<Image
 										width={20}
 										height={24}
-										src='/images/icons/calendar.png'
+										src='/images/icons/calendar.svg'
 										alt='publication date icon'
 									/>
 									<p className={styles.date}>{blog.date}</p>

@@ -70,7 +70,7 @@ const CartSection = () => {
 											className={styles.remove_btn}
 										>
 											<Image
-												src='/images/icons/remove.png'
+												src='/images/icons/remove.svg'
 												height={22}
 												width={21}
 												alt='remove icon image'

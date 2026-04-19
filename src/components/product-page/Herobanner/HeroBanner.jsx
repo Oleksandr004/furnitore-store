@@ -65,7 +65,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					</MotionLink>
 					<Image
 						className='ml-5 mr-7'
-						src={`${baseUrl}/images/icons/arrow.png`}
+						src={`${baseUrl}/images/icons/arrow.svg`}
 						alt='arrow img'
 					/>
 					<MotionLink
@@ -80,7 +80,7 @@ const HeroBanner = ({ name, description, image, price, id, imageUrl }) => {
 					</MotionLink>
 					<Image
 						className='ml-7 mr-8'
-						src={`${baseUrl}/images/icons/arrow.png`}
+						src={`${baseUrl}/images/icons/arrow.svg`}
 						alt='arrow img'
 					/>
 					<div className={`${styles.line}`} />

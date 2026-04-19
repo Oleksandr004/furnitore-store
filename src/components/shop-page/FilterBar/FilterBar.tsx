@@ -35,8 +35,8 @@ const FilterBar = ({
 					<div className={`${styles.left_row} flex items-center flex-wrap`}>
 						<Image
 							className={`${styles.settings_filter_img}`}
-							src='/images/icons/filter.png'
-							alt='row filter'
+							src='/images/icons/filter.svg'
+							alt='row filter image'
 							width={19}
 							height={16}
 							style={{ maxHeight: 16 }}
@@ -44,8 +44,8 @@ const FilterBar = ({
 						<p className={`${styles.filter_title} ml-3 mr-6`}>Filter</p>
 						<Image
 							className={`${styles.grid_filter_img}`}
-							src='/images/icons/grid filter.png'
-							alt='grid filter'
+							src='/images/icons/grid filter.svg'
+							alt='grid filter image'
 							width={16.33}
 							height={16.33}
 							style={{ maxHeight: 16.33, cursor: 'pointer' }}
@@ -53,8 +53,8 @@ const FilterBar = ({
 						/>
 						<Image
 							className={`${styles.row_filter_img} ml-6 mr-8`}
-							src='/images/icons/row filter.png'
-							alt='settings.png'
+							src='/images/icons/row filter.svg'
+							alt='settings image'
 							width={21}
 							height={19.5}
 							style={{ maxHeight: 19.5, cursor: 'pointer' }}

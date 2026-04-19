@@ -74,7 +74,7 @@ const Header = ({ background }: TProps) => {
 							<Link href='/auth'>
 								<motion.div whileHover={{ scale: 1.3 }}>
 									<Image
-										src='/images/icons/account.png'
+										src='/images/icons/account.svg'
 										alt='profile account logo'
 										height={19}
 										width={24}
@@ -88,7 +88,7 @@ const Header = ({ background }: TProps) => {
 									<Image
 										width={25}
 										height={25}
-										src='/images/icons/search.png'
+										src='/images/icons/search.svg'
 										alt='search logo'
 									/>
 								</motion.div>
@@ -98,7 +98,7 @@ const Header = ({ background }: TProps) => {
 							<Link href='#!'>
 								<motion.div whileHover={{ scale: 1.3 }}>
 									<Image
-										src='/images/icons/wish.png'
+										src='/images/icons/wish.svg'
 										alt='wishlist logo'
 										height={23}
 										width={26}
@@ -110,7 +110,7 @@ const Header = ({ background }: TProps) => {
 							<Link href='/cart'>
 								<motion.div whileHover={{ scale: 1.3 }}>
 									<Image
-										src='/images/icons/basket.png'
+										src='/images/icons/basket.svg'
 										alt='shopping cart logo'
 										height={23}
 										width={25}
